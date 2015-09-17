@@ -60,6 +60,7 @@ ts() {
 	fi
 	if $delete && [[ -z $ft ]]; then
 		echo 'error: filetype must be included with -d' >&2
+		return 1
 	fi
 
 	# construct the new file
