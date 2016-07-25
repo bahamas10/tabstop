@@ -9,8 +9,7 @@
 # we do everything in a function so this file can be sourced,
 # or called directly
 ts() {
-	local prog=${0##*/}
-	local usage="Usage: $prog [-f file] [-d] [filetype] [0-9t]"
+	local usage="Usage: ts [-f file] [-d] [filetype] [0-9t]"
 
 	local file=~/.vimrc.indent
 	local delete=false
