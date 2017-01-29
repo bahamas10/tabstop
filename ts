@@ -18,7 +18,7 @@ ts() {
 			d) delete=true;;
 			h) echo "$usage"; return 0;;
 			f) file=$OPTARG;;
-			*) echo "$usage"; return 0;;
+			*) echo "$usage"; return 1;;
 		esac
 	done
 	shift "$((OPTIND - 1))"
