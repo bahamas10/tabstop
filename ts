@@ -36,8 +36,13 @@ ts() {
 		local ret=1
 		while read -r _ _ FileType _ sw _ et _; do
 			[[ -n $FileType ]] || continue
-			sw="${sw##*=} spaces"
-			[[ $et == 'noet' ]] && sw='tabs'
+
+			if [[ $et == 'noet' ]]; then
+				sw='tabs'
+			else
+				sw="${sw##*=} spaces"
+			fi
+
 			if [[ -n $ft && $ft == "$FileType" ]]; then
 				echo "$sw"
 				ret=0
@@ -49,7 +54,7 @@ ts() {
 		return "$ret"
 	fi
 
-	# if we are here, user wants to set a value
+	# if we are here, user wants to set or delete a value
 
 	# validate input
 	local valid_re='^([0-9]+|t|tabs)$'
