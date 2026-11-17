@@ -84,7 +84,7 @@ or source it from your `.bashrc` file to use it as a function.
 
 Optionally, use [Bics](https://github.com/bahamas10/bics) to manage this plugin
 
-    bics install git://github.com/bahamas10/tabstop.git
+    bics install https://github.com/bahamas10/tabstop.git
 
 License
 -------
